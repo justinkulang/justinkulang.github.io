@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin Kulang | Cloud, Security & Network Engineer</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#3B82F6',
+            accent: '#0EA5E9',
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'blob': 'blob 7s infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #020617;
+      color: #f8fafc;
+    }
+    .glass-card {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.2);
+      border-color: rgba(59, 130, 246, 0.3);
+    }
+    .text-gradient {
+      background: linear-gradient(to right, #3B82F6, #0EA5E9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="antialiased relative overflow-x-hidden">
+
+  <!-- Background Animated Blobs -->
+  <div class="fixed inset-0 w-full h-full pointer-events-none z-[-1]">
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob"></div>
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-32 left-1/2 w-96 h-96 bg-indigo-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-slate-950/80 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-bold tracking-tighter text-white">
+        Justin<span class="text-primary">Kulang</span>
+      </a>
+      <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-primary transition-colors">About</a>
+        <a href="#hotspot" class="hover:text-primary transition-colors text-accent">Hotspot Solutions</a>
+        <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+        <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-primary transition-colors border-l border-white/10 pl-8">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 flex items-center min-h-[90vh]">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-in-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold mb-6">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          Available for Hire & Projects
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-900 tracking-tight mb-6 leading-tight">
+          Securing the Cloud & <br />
+          <span class="text-gradient">Connecting the World.</span>
+        </h1>
+        <p class="text-lg text-slate-400 mb-8 max-w-xl leading-relaxed">
+          I am a Cloud & Cybersecurity Engineer specializing in secure cloud infrastructure, threat mitigation, and enterprise-grade networking (The IT Dad).
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#contact" class="px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-xl font-semibold transition-all shadow-lg shadow-primary/30 flex items-center gap-2">
+            Let's Talk <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#hotspot" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-semibold transition-all flex items-center gap-2">
+            View IT Services <i data-lucide="wifi" class="w-4 h-4 text-accent"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Abstract Tech Visual -->
+      <div class="hidden lg:flex justify-center animate-fade-in-up" style="animation-delay: 0.2s;">
+        <div class="relative w-full max-w-md aspect-square rounded-full border border-slate-800 flex items-center justify-center">
+            <div class="absolute w-[80%] h-[80%] rounded-full border border-slate-700 border-dashed animate-[spin_20s_linear_infinite]"></div>
+            <div class="absolute w-[60%] h-[60%] rounded-full border border-primary/30 animate-[spin_15s_linear_infinite_reverse]"></div>
+            <div class="w-24 h-24 bg-gradient-to-tr from-primary to-accent rounded-2xl flex items-center justify-center shadow-2xl shadow-primary/50 rotate-12">
+                <i data-lucide="shield-check" class="w-12 h-12 text-white"></i>
+            </div>
+            <!-- Floating icons -->
+            <div class="absolute top-10 left-10 w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-800 shadow-xl"><i data-lucide="cloud" class="w-6 h-6 text-slate-300"></i></div>
+            <div class="absolute bottom-10 right-10 w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center border border-slate-800 shadow-xl"><i data-lucide="server" class="w-6 h-6 text-slate-300"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Introduction</h2>
+          <h3 class="text-3xl md:text-5xl font-bold mb-6">Who is Justin Kulang?</h3>
+          <p class="text-slate-400 text-lg leading-relaxed mb-6">
+            I'm a dedicated Cloud and Cybersecurity professional with a passion for building resilient digital environments. Beyond the corporate space, I'm known as <strong>"The IT Dad"</strong> — a title earned through my commitment to making high-end technology accessible to everyone.
+          </p>
+          <p class="text-slate-400 text-lg leading-relaxed mb-8">
+            My expertise lies at the intersection of network security and cloud scalability. I don't just build systems; I secure them against evolving threats while ensuring maximum uptime for end-users.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-slate-900 border border-white/5">
+              <div class="text-primary font-bold text-2xl">5+</div>
+              <div class="text-slate-500 text-sm">Years Experience</div>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-900 border border-white/5">
+              <div class="text-primary font-bold text-2xl">50+</div>
+              <div class="text-slate-500 text-sm">Projects Delivered</div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-video md:aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-white/10 shadow-2xl flex items-center justify-center">
+             <!-- Placeholder for a personal photo or bio-graphic -->
+             <i data-lucide="user" class="w-32 h-32 text-slate-700"></i>
+          </div>
+          <div class="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl hidden md:block">
+            <p class="text-sm italic text-slate-300 font-medium">"Technology should empower, not complicate."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOTSPOT & SERVER INSTALLATION -->
+  <section id="hotspot" class="py-24 relative bg-slate-900/50 border-y border-white/5">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-primary font-semibold tracking-wide uppercase text-sm mb-2">Professional Services</h2>
+        <h3 class="text-3xl md:text-5xl font-bold mb-4 text-gradient">Enterprise WiFi & Server Installs</h3>
+        <p class="text-slate-400 max-w-2xl mx-auto">Providing end-to-end network infrastructure, secure captive portals, and robust server deployments for businesses of all sizes.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="glass-card p-8 rounded-2xl">
+          <div class="w-14 h-14 bg-blue-500/10 rounded-xl flex items-center justify-center mb-6 border border-blue-500/20">
+            <i data-lucide="wifi" class="w-7 h-7 text-primary"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Hotspot Systems</h4>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Custom MikroTik RouterOS configurations, branded captive portals (Super Wifi), bandwidth management, and secure user authentication systems.
+          </p>
+          <ul class="text-sm text-slate-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Captive Portal Design</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Bandwidth Limiting</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Voucher Generation</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-card p-8 rounded-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full -z-10"></div>
+          <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 border border-cyan-500/20">
+            <i data-lucide="server" class="w-7 h-7 text-accent"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Server Infrastructure</h4>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Physical and virtual server deployments, rack management, cabling, and OS installation. Resilient and scalable business backbones.
+          </p>
+          <ul class="text-sm text-slate-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Windows/Linux Servers</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Rack Configuration</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> NAS & Backup Setup</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-card p-8 rounded-2xl">
+          <div class="w-14 h-14 bg-indigo-500/10 rounded-xl flex items-center justify-center mb-6 border border-indigo-500/20">
+            <i data-lucide="shield" class="w-7 h-7 text-indigo-400"></i>
+          </div>
+          <h4 class="text-xl font-bold mb-3">Network Security</h4>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Enterprise firewall configuration, VLAN segmentation, VPN setups for remote workers, and continuous threat monitoring.
+          </p>
+          <ul class="text-sm text-slate-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Firewall Rules (MikroTik/Cisco)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Secure VPNs</li>
+            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-accent"></i> Network Auditing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h3 class="text-3xl md:text-5xl font-bold">Technical Arsenal</h3>
+        <p class="text-slate-500 mt-4">Technologies I work with daily to build and secure systems.</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="cloud-lightning" class="w-8 h-8 text-blue-400"></i>
+          <span class="font-semibold text-slate-200">AWS / Azure</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="shield-alert" class="w-8 h-8 text-red-400"></i>
+          <span class="font-semibold text-slate-200">Penetration Testing</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="network" class="w-8 h-8 text-green-400"></i>
+          <span class="font-semibold text-slate-200">MikroTik / Cisco</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="terminal-square" class="w-8 h-8 text-yellow-400"></i>
+          <span class="font-semibold text-slate-200">Linux</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="lock" class="w-8 h-8 text-purple-400"></i>
+          <span class="font-semibold text-slate-200">IAM & Cryptography</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="code" class="w-8 h-8 text-pink-400"></i>
+          <span class="font-semibold text-slate-200">Python / Scripting</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="database" class="w-8 h-8 text-orange-400"></i>
+          <span class="font-semibold text-slate-200">SIEM Tools</span>
+        </div>
+        <div class="glass-card p-6 rounded-2xl flex flex-col items-center justify-center gap-4 text-center">
+          <i data-lucide="cpu" class="w-8 h-8 text-teal-400"></i>
+          <span class="font-semibold text-slate-200">Hardware & Servers</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="py-24 px-6 bg-slate-900/30">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl md:text-5xl font-bold mb-16 text-center">Professional Journey</h3>
+      
+      <div class="space-y-12">
+        <div class="relative pl-8 border-l-2 border-primary/20">
+          <div class="absolute w-4 h-4 bg-primary rounded-full -left-[9px] top-1"></div>
+          <div class="mb-1 text-primary font-bold">2023 - Present</div>
+          <h4 class="text-xl font-bold text-white">Cloud & Cybersecurity Engineer</h4>
+          <p class="text-slate-400 mt-2">Specializing in cloud architecture security, threat assessment, and infrastructure automation.</p>
+        </div>
+
+        <div class="relative pl-8 border-l-2 border-primary/20">
+          <div class="absolute w-4 h-4 bg-slate-700 rounded-full -left-[9px] top-1"></div>
+          <div class="mb-1 text-slate-500 font-bold">2020 - 2023</div>
+          <h4 class="text-xl font-bold text-white">Network & Infrastructure Specialist</h4>
+          <p class="text-slate-400 mt-2">Managing multi-site enterprise networks, server deployments, and IT support services.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / CTA -->
+  <section id="contact" class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/10 -z-10"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-6xl font-black mb-6">Let's build something secure.</h2>
+      <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+        Whether you need a full enterprise WiFi deployment, cloud security audit, or a customized server setup, I'm ready to build it.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+        <a href="mailto:justinkulang@gmail.com" class="flex items-center justify-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-xl font-bold hover:bg-slate-200 transition-colors">
+          <i data-lucide="mail" class="w-5 h-5"></i> Email Me
+        </a>
+        <a href="tel:+211923616820" class="flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-white/20 hover:bg-white/10 rounded-xl font-bold transition-colors">
+          <i data-lucide="phone" class="w-5 h-5"></i> +211 923 616 820
+        </a>
+      </div>
+
+      <div class="flex justify-center gap-6">
+        <a href="https://www.linkedin.com/in/justin-augustino-kulang-614598a2/" target="_blank" class="p-4 bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all text-slate-400">
+          <i data-lucide="linkedin" class="w-6 h-6"></i>
+        </a>
+        <a href="#" class="p-4 bg-slate-800 rounded-full hover:bg-primary hover:text-white transition-all text-slate-400">
+          <i data-lucide="github" class="w-6 h-6"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 border-t border-white/5 text-center text-slate-500 text-sm bg-slate-950">
+    <p>&copy; 2026 Justin Kulang (The IT Dad). All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
